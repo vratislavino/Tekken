@@ -68,6 +68,7 @@
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
     <Compile Include="IMinigame.cs" />
+    <Compile Include="TekkenConsole.cs" />
     <Compile Include="WaveMatch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +88,12 @@
     </Compile>
     <Compile Include="Targets.Designer.cs">
       <DependentUpon>Targets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinnerForm.Designer.cs">
+      <DependentUpon>WinnerForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FighterModel.resx">
       <DependentUpon>FighterModel.cs</DependentUpon>
@@ -114,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="Targets.resx">
       <DependentUpon>Targets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinnerForm.resx">
+      <DependentUpon>WinnerForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

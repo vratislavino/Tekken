@@ -39,7 +39,9 @@ namespace Tekken
         private void GenerateSinus()
         {
             Random r = new Random();
-            currentFreq = r.Next(freqScroll.Minimum, freqScroll.Maximum+1);
+            currentFreq = r.Next(freqScroll.Minimum, freqScroll.Maximum);
+            Console.WriteLine("Maximum: " + freqScroll.Maximum);
+            Console.WriteLine("Target: " + currentFreq);
             currentAmp = r.Next(ampScroll.Minimum, ampScroll.Maximum);
             panel1.Refresh();
         }
@@ -116,12 +118,14 @@ namespace Tekken
 
         private void CheckMatch()
         {
-            if(Math.Abs(ampScroll.Value - currentAmp) < 3 && Math.Abs(freqScroll.Value - currentFreq) < 3)
+
+            Console.WriteLine("Target: " + freqScroll.Value);
+            if (Math.Abs(ampScroll.Value - currentAmp) < 3 && Math.Abs(freqScroll.Value - currentFreq) < 3)
             {
                 points++;
                 if(points < 8)
                 {
-                    value = 1000;
+                    value = 1000 - (points * 8);
                     GenerateSinus();
                 } else
                 {
@@ -130,16 +134,22 @@ namespace Tekken
             }
         }
 
-        private void freqScroll_Scroll(object sender, ScrollEventArgs e)
+        private void trackBar2_Scroll(object sender, EventArgs e)
         {
             panel1.Refresh();
             CheckMatch();
         }
 
-        private void ampScroll_Scroll(object sender, ScrollEventArgs e)
+        private void freqScroll_Scroll(object sender, EventArgs e)
         {
             panel1.Refresh();
             CheckMatch();
+        }
+
+        private void WaveMatch_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            gameTimer.Stop();
+            countdownTimer.Stop();
         }
     }
 }

@@ -34,11 +34,13 @@
             this.countdownLbl = new System.Windows.Forms.Label();
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            this.freqScroll = new System.Windows.Forms.HScrollBar();
-            this.ampScroll = new System.Windows.Forms.HScrollBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.freqScroll = new System.Windows.Forms.TrackBar();
+            this.ampScroll = new System.Windows.Forms.TrackBar();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.freqScroll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ampScroll)).BeginInit();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -79,28 +81,6 @@
             this.gameTimer.Interval = 10;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
-            // freqScroll
-            // 
-            this.freqScroll.Location = new System.Drawing.Point(122, 345);
-            this.freqScroll.Maximum = 36;
-            this.freqScroll.Minimum = 1;
-            this.freqScroll.Name = "freqScroll";
-            this.freqScroll.Size = new System.Drawing.Size(707, 36);
-            this.freqScroll.TabIndex = 2;
-            this.freqScroll.Value = 18;
-            this.freqScroll.Scroll += new System.Windows.Forms.ScrollEventHandler(this.freqScroll_Scroll);
-            // 
-            // ampScroll
-            // 
-            this.ampScroll.Location = new System.Drawing.Point(122, 381);
-            this.ampScroll.Maximum = 30;
-            this.ampScroll.Minimum = 15;
-            this.ampScroll.Name = "ampScroll";
-            this.ampScroll.Size = new System.Drawing.Size(707, 40);
-            this.ampScroll.TabIndex = 4;
-            this.ampScroll.Value = 30;
-            this.ampScroll.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ampScroll_Scroll);
-            // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -121,21 +101,47 @@
             this.label1.Text = "Frequency";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // freqScroll
+            // 
+            this.freqScroll.Location = new System.Drawing.Point(136, 337);
+            this.freqScroll.Maximum = 36;
+            this.freqScroll.Minimum = 16;
+            this.freqScroll.Name = "freqScroll";
+            this.freqScroll.Size = new System.Drawing.Size(693, 45);
+            this.freqScroll.TabIndex = 7;
+            this.freqScroll.Value = 16;
+            this.freqScroll.Scroll += new System.EventHandler(this.freqScroll_Scroll);
+            // 
+            // ampScroll
+            // 
+            this.ampScroll.Location = new System.Drawing.Point(136, 373);
+            this.ampScroll.Maximum = 36;
+            this.ampScroll.Minimum = 10;
+            this.ampScroll.Name = "ampScroll";
+            this.ampScroll.Size = new System.Drawing.Size(693, 45);
+            this.ampScroll.TabIndex = 8;
+            this.ampScroll.Value = 10;
+            this.ampScroll.Scroll += new System.EventHandler(this.trackBar2_Scroll);
+            // 
             // WaveMatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 459);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.ampScroll);
             this.Controls.Add(this.freqScroll);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.progressBar1);
             this.Name = "WaveMatch";
             this.Text = "WaveMatch";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WaveMatch_FormClosing);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.freqScroll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ampScroll)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -146,9 +152,9 @@
         private System.Windows.Forms.Timer countdownTimer;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Label countdownLbl;
-        private System.Windows.Forms.HScrollBar freqScroll;
-        private System.Windows.Forms.HScrollBar ampScroll;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TrackBar freqScroll;
+        private System.Windows.Forms.TrackBar ampScroll;
     }
 }

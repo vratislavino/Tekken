@@ -25,3 +25,4 @@ C:\Programming\Tekken\Tekken\obj\Debug\Tekken.exe
 C:\Programming\Tekken\Tekken\obj\Debug\Tekken.pdb
 C:\Programming\Tekken\Tekken\obj\Debug\Tekken.Letters.resources
 C:\Programming\Tekken\Tekken\obj\Debug\Tekken.WaveMatch.resources
+C:\Programming\Tekken\Tekken\obj\Debug\Tekken.WinnerForm.resources

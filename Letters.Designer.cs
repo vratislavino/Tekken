@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.letterLbl = new System.Windows.Forms.Label();
+            this.countdownLbl = new System.Windows.Forms.Label();
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            this.countdownLbl = new System.Windows.Forms.Label();
-            this.letterLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,26 +55,6 @@
             this.panel1.Size = new System.Drawing.Size(333, 322);
             this.panel1.TabIndex = 1;
             // 
-            // countdownTimer
-            // 
-            this.countdownTimer.Interval = 1000;
-            this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
-            // 
-            // gameTimer
-            // 
-            this.gameTimer.Interval = 10;
-            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
-            // 
-            // countdownLbl
-            // 
-            this.countdownLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.countdownLbl.Location = new System.Drawing.Point(0, 0);
-            this.countdownLbl.Name = "countdownLbl";
-            this.countdownLbl.Size = new System.Drawing.Size(333, 325);
-            this.countdownLbl.TabIndex = 0;
-            this.countdownLbl.Text = "3";
-            this.countdownLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // letterLbl
             // 
             this.letterLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -86,6 +66,26 @@
             this.letterLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.letterLbl.Visible = false;
             // 
+            // countdownLbl
+            // 
+            this.countdownLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.countdownLbl.Location = new System.Drawing.Point(0, 0);
+            this.countdownLbl.Name = "countdownLbl";
+            this.countdownLbl.Size = new System.Drawing.Size(333, 325);
+            this.countdownLbl.TabIndex = 0;
+            this.countdownLbl.Text = "3";
+            this.countdownLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // countdownTimer
+            // 
+            this.countdownTimer.Interval = 1000;
+            this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
+            // 
+            // gameTimer
+            // 
+            this.gameTimer.Interval = 10;
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
+            // 
             // Letters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,6 +95,7 @@
             this.Controls.Add(this.progressBar1);
             this.Name = "Letters";
             this.Text = "Letters";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Letters_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Letters_KeyDown);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

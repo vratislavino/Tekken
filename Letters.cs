@@ -39,7 +39,7 @@ namespace Tekken
                 points++;
                 if(points < 8)
                 {
-                    value = 100;
+                    value = 100 - (points*10);
                     GenerateLetter();
                 } else
                 {
@@ -91,6 +91,12 @@ namespace Tekken
             {
                 EndGame();
             }
+        }
+
+        private void Letters_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            gameTimer.Stop();
+            countdownTimer.Stop();
         }
     }
 }

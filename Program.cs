@@ -16,8 +16,8 @@ namespace Tekken
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Game(Fighters.Stepan,Fighters.Radek));
-            //Application.Run(new FighterSelect());
+            //Application.Run(new Game(Fighters.Stepan,Fighters.Radek));
+            Application.Run(new FighterSelect());
         }
     }
 }

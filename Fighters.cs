@@ -10,7 +10,7 @@ namespace Tekken
     {
         public static Fighter Pavel = new Fighter("Pavel Medek", "imagines/pavel_medek.jpg", 30, 150, 40, 12, 20);
         public static Fighter Arny = new Fighter("Martin Krpeš", "imagines/martin_krpes.jpg", 50, 120, 20, 32, 37);
-        public static Fighter Stepan = new Fighter("Štěpán Žárský", "imagines/stepan_zarsky.jpg", 12, 50, 75, 70, 55);
+        public static Fighter Stepan = new Fighter("Štěpán Žárský", "imagines/stepan_zarsky.jpg", 12, 50, 75, 70, 95);
         public static Fighter Radek = new Fighter("Radek Šmejkal", "imagines/radek_smejkal.jpg", 11, 500, 0, 10, 0);
         public static Fighter Vrata = new Fighter("Vratislav Medřický", "imagines/vrata_medricky.jpg", 101, 189, 17, 0, 8);
         public static Fighter Formic = new Fighter("Martin Formanek", "imagines/martin_formanek.jpg", 101, 189, 17, 0, 8);

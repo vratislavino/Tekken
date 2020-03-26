@@ -100,7 +100,7 @@ namespace Tekken
                 points++;
                 if (points < 8)
                 {
-                    value = 100;
+                    value = 100 - (points * 7);
                     GenerateRectangle();
                 } else
                 {
@@ -116,6 +116,12 @@ namespace Tekken
             drawRect.Y -= currentTarget.Height / 2;
 
             e.Graphics.FillEllipse(Brushes.DarkGreen, drawRect);
+        }
+
+        private void Targets_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            gameTimer.Stop();
+            countdown.Stop();
         }
     }
 }

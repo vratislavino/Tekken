@@ -133,6 +133,8 @@ namespace Tekken
             g.FormClosed += (s, evt) =>
             {
                 this.Show();
+                this.fighter = null;
+                this.pictureBox1.Image = null;
             };
         }
     }

@@ -36,8 +36,10 @@
             this.opponentpgbr = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.fighterpctbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opponentpctbx)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // fighterpctbx
@@ -60,12 +62,12 @@
             // 
             // consolelbl
             // 
-            this.consolelbl.Font = new System.Drawing.Font("MV Boli", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consolelbl.Location = new System.Drawing.Point(12, 463);
+            this.consolelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consolelbl.Location = new System.Drawing.Point(3, 0);
             this.consolelbl.Name = "consolelbl";
-            this.consolelbl.Size = new System.Drawing.Size(1402, 228);
+            this.consolelbl.Size = new System.Drawing.Size(1399, 42);
             this.consolelbl.TabIndex = 2;
-            this.consolelbl.Text = "label1";
+            this.consolelbl.Text = "label1\\nasd";
             // 
             // fightbtn
             // 
@@ -114,17 +116,27 @@
             this.label2.Text = "556";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.flowLayoutPanel1.Controls.Add(this.consolelbl);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 477);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1402, 211);
+            this.flowLayoutPanel1.TabIndex = 8;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1426, 700);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.opponentpgbr);
             this.Controls.Add(this.fighterpgbr);
             this.Controls.Add(this.fightbtn);
-            this.Controls.Add(this.consolelbl);
             this.Controls.Add(this.opponentpctbx);
             this.Controls.Add(this.fighterpctbx);
             this.Name = "Game";
@@ -132,6 +144,7 @@
             this.Load += new System.EventHandler(this.Game_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fighterpctbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opponentpctbx)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -146,5 +159,6 @@
         private System.Windows.Forms.ProgressBar opponentpgbr;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
